@@ -29,9 +29,17 @@ else
   endfunction
 endif
 
+function! s:is_not_drawer_window() abort
+  echomsg 's:is_not_drawer_window()'
+  echomsg 'winnr(): ' winnr()
+  echomsg 'winnr(h): ' winnr(h)
+  echomsg 'winnr(l): ' winnr(l)
+  return 0
+endfunction
+
 function! s:save_width() abort
   echomsg 's:save_width()'
-  if s:should_ignore()
+  if s:should_ignore() || s:is_not_drawer_window()
     return
   endif
   let t:fern_drawer_auto_resize_width = winwidth(0)
