@@ -1,4 +1,5 @@
 function! fern#internal#drawer#auto_resize#init() abort
+  echomsg 'fern#internal#drawer#auto_resize#init()'
   if g:fern#disable_drawer_auto_resize
     return
   endif
@@ -29,16 +30,16 @@ else
 endif
 
 function! s:save_width() abort
-  execute 'echomsg "s:save_width()"'
+  echomsg 's:save_width()'
   if s:should_ignore()
     return
   endif
   let t:fern_drawer_auto_resize_width = winwidth(0)
-  execute 'echomsg "t:fern_drawer_auto_resize_width: " t:fern_drawer_auto_resize_width'
+  echomsg 't:fern_drawer_auto_resize_width: ' t:fern_drawer_auto_resize_width
 endfunction
 
 function! s:load_width() abort
-  execute 'echomsg "s:load_width()"'
+  echomsg 's:load_width()'
   if s:should_ignore()
     return
   endif
