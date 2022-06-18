@@ -20,7 +20,8 @@ function! fern#internal#drawer#resize() abort
   echomsg 'Called fern#internal#drawer#resize()'
   let fri = fern#fri#parse(bufname('%'))
   let width = str2nr(get(fri.query, 'width', string(g:fern#drawer_width)))
-  execute 'vertical resize' width
+  " execute 'vertical resize' width
+  execute 'vertical resize' g:fern#drawer_width
 endfunction
 
 function! fern#internal#drawer#open(fri, ...) abort
