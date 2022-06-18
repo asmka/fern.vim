@@ -43,6 +43,7 @@ function! fern#internal#drawer#open(fri, ...) abort
 endfunction
 
 function! fern#internal#drawer#init() abort
+  echomsg 'Called fern#internal#drawer#init()'
   if !fern#internal#drawer#is_drawer()
     return
   endif
