@@ -42,7 +42,8 @@ function! s:load_width() abort
   if !exists('t:fern_drawer_auto_resize_width')
     call fern#internal#drawer#resize()
   else
-    execute 'vertical resize' t:fern_drawer_auto_resize_width
+    " execute 'vertical resize' t:fern_drawer_auto_resize_width
+    execute 'vertical resize' g:fern#drawer_width
   endif
 endfunction
 
