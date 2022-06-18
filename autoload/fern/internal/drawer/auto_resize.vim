@@ -32,8 +32,8 @@ endif
 function! s:is_not_drawer_window() abort
   echomsg 's:is_not_drawer_window()'
   echomsg 'winnr(): ' winnr()
-  echomsg 'winnr("h"): ' winnr(h)
-  echomsg 'winnr("l"): ' winnr(l)
+  echomsg 'winnr("h"): ' winnr("h")
+  echomsg 'winnr("l"): ' winnr("l")
   return 0
 endfunction
 
